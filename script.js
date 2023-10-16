@@ -2,10 +2,12 @@
 const classes = {}
 const days = ["mandag", "tirsdag", "onsdag", "torsdag", "fredag"]
 const startTimes = ["09:00", "10:00", "11:00", "12:00", "13:00"]
+const lessons = ["matte", "norsk"]
+
 
 const classesPtagEl = document.querySelector("#classesPtag")
 const classesInputEl = document.querySelector("#classesInput")
-
+const lessonInputEl = document.querySelector("#lessonInput")
 
 
 function updateClassesDOM() {
@@ -41,3 +43,18 @@ function addClass(e) {
     classesInputEl.value = ""
 }
 
+function addLesson(e) {
+
+    const lessonExists = lessonName => {
+        console.log("lesson exists");
+    }
+
+    const lessonName = lessonInputEl.value
+
+    if(lessonName === "") return
+    if(!(lessons.indexOf(lessonName) === -1)) {lessonExists(lessonName); return}
+
+    lessons.push(lessonName)
+
+    lessonInputEl.value = ""
+}
