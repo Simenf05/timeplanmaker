@@ -58,3 +58,4 @@ function addLesson(e) {
 
     lessonInputEl.value = ""
 }
+

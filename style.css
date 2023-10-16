@@ -5,3 +5,11 @@
     flex-direction: column;
     align-items: center;
 }
+
+div {
+    margin: 15px;
+}
+
+.mediumThicc {
+    width: 25%;
+}
