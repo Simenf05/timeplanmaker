@@ -13,3 +13,36 @@ div {
 .mediumThicc {
     width: 25%;
 }
+
+.classChangeContainer {
+    display: block;
+    position: relative;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    border: 1px solid black;
+}
+
+.classChangeContainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.classChangeContainer:hover {
+    background-color: #ccc;
+}
+
+.classChangeContainer input:checked ~ .classChangeContainer {
+    border: 5px solid black;
+}
+
+select {
+    border: none;
+}
